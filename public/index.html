@@ -19,13 +19,14 @@
 	 
 		function sessionConnectedHandler(event) {
 		  publisher = session.publish('myPublisherDiv');
-		   
+		   alert("welcome to harsh's application, right now under const.");
 		  // Subscribe to streams that were in the session when we connected
 		  subscribeToStreams(event.streams);
 		}
 		 
 		function streamCreatedHandler(event) {
 		  // Subscribe to any new streams that are created
+		  alert("new person connected.")
 		  subscribeToStreams(event.streams);
 		}
 		 
@@ -49,5 +50,15 @@
 </head>
 <body>
 	<div id="myPublisherDiv"></div>
+	<script type="text/javascript">
+		var __lc = {};
+		__lc.license = 1194031;
+
+		(function() {
+		  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+		  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+		})();
+	</script>
 </body>
 </html>
